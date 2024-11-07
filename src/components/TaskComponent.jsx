@@ -1,7 +1,15 @@
 import React from "react";
+import { useSortable } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 
-function TaskComponent({ task, tasks, setTasks }) {
+function TaskComponent({ task, tasks, setTasks, containerId }) {
   const { title, description, status, id } = task;
+  const { attributes, listeners, setNodeRef, transform, transition } =
+    useSortable({ id });
+  const style = {
+    transition,
+    transform: CSS.Transform.toString(transform),
+  };
 
   const handleDelete = () => {
     const updatedTasks = tasks.filter((t) => t.id !== id);
@@ -27,7 +35,21 @@ function TaskComponent({ task, tasks, setTasks }) {
   };
 
   return (
-    <div className="border-[1px] border-white border-opacity-30 px-4 py-2">
+    <div
+      ref={setNodeRef}
+      style={style}
+      className="relative border-[1px] border-white border-opacity-30 px-4 py-2"
+      data-sortable-id={containerId}
+    >
+      <div
+        {...attributes}
+        {...listeners}
+        className="absolute top-0 right-0 cursor-grab p-2 text-lg"
+        style={{ cursor: "grab" }}
+      >
+        ::
+      </div>
+
       <h2 className="title font-bold tracking-wide text-xl xl:text-2xl">
         {title}
       </h2>

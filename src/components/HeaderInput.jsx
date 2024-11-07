@@ -41,7 +41,7 @@ function HeaderInput({ setTasks }) {
         value={formData.description}
         onChange={handleChange}
         placeholder="Description"
-        className="w-full h-full text-xl focus:outline-none px-2 py-1 text-[#d0d1d3] xl:text-2xl bg-[#383c41] xl:px-4"
+        className="w-full h-full text-xl focus:outline-none px-2 py-1 text-[#d0d1d3] xl:text-2xl bg-[#383c41] xl:px-4 xl:py-1"
       />
       <button
         type="submit"
