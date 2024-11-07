@@ -71,12 +71,7 @@ function TodoPage() {
 
   const sensors = useSensors(
     useSensor(PointerSensor),
-    useSensor(TouchSensor, {
-      activationConstraint: {
-        delay: 250, // delay in milliseconds
-        tolerance: 5, // tolerance for slight finger movements
-      },
-    }),
+    useSensor(TouchSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
     })
