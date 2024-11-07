@@ -1,3 +1,3 @@
-# KanbanBoard
+# KanbanBoard-aws
 
-Developed a Kanban board with drag-and-drop support for task organization. Users can move tasks across columns for efficient workflow, with data stored in local storage for persistence. This project demonstrates JavaScript and DOM manipulation to enhance task management.
+Developed a Kanban board with drag-and-drop functionality for task management. Users can move tasks across columns for better workflow. Data is stored in local storage for persistence. Optionally, AWS Lambda and API Gateway are used to store tasks in DynamoDB, enabling persistence beyond the local browser.
