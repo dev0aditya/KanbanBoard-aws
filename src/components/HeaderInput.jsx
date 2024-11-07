@@ -33,7 +33,7 @@ function HeaderInput({ setTasks }) {
         value={formData.title}
         onChange={handleChange}
         placeholder="Title"
-        className="w-full h-full text-xl focus:outline-none px-2 py-1 text-[#d0d1d3] xl:mb-[0.10rem] xl:text-2xl bg-[#383c41] xl:px-4 "
+        className="w-full h-full text-xl focus:outline-none px-2 py-1 text-[#d0d1d3] mb-[0.10rem] xl:text-2xl bg-[#383c41] xl:px-4 "
       />
       <input
         type="text"
